@@ -4,13 +4,13 @@
 
 @font-face {
     font-family: "Inter Web";
-    font-weight: 200;
+    font-weight: 400;
     src: url("../fonts/Inter-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Inter Web";
-    font-weight: 400;
+    font-weight: 600;
     src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
 }
 
@@ -427,6 +427,7 @@ label {
     width: auto;
     overflow: visible;
     background: transparent;
+    outline: none;
 
     /* inherit font & color from ancestor */
     color: inherit;
@@ -486,6 +487,24 @@ label {
     Card with box shadow
 */
 
+.c-card {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px solid #0000000d;
+}
+
+.c-card__body {
+
+}
+
+.c-card__title {
+
+}
+
+.c-card__footer {
+
+}
+
 /*
     Component: Forms
     ---
@@ -506,10 +525,33 @@ label {
 */
 
 .c-input {
-    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E2E3E7;
+    border-radius: 3px;
+    font-family: inherit;
+    color:inherit;
+
+    font-size: 16px;
+    line-height: 24px;
+    padding: 11px 16px;
+    /* border: 1px solid #E2E3E7; */
+}
+
+.c-input::placeholder {
+    color: #B5B6C0;
 }
 
 .c-input:focus {
+    outline: none;
+    border-color: #4f95ff;
+    /* box-shadow: h-offset v-offset blur spread color; */
+    box-shadow: 0 0 0 3px #3385ff4d;
 }
 
 /*
@@ -535,19 +577,29 @@ label {
 */
 
 .c-button {
-
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border: #2E77E6;
+    border-radius: 3px;
+    color: white;
+    background-color: #3385FF;
+    line-height: 20px;
+    padding: 14px 0;
+    width: 100%;
 }
 
 .c-button:hover {
-
+    background-color: #4F95FF;
 }
 
 .c-button:focus {
-
+    outline: none;
+    box-shadow: 0 0 0 3px #3385ff4d;
 }
 
 .c-button:active {
-
+    background-color: #2E77E6;
 }
 
 .c-button--block {
